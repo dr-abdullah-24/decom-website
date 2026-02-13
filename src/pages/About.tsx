@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import {
   FiUsers,
-  FiBriefcase,
   FiAward,
   FiMessageSquare,
   FiTarget,
@@ -15,7 +14,7 @@ import {
 } from 'react-icons/fi';
 
 import aliIkramImg from '../assets/attemp2.png';
-import ijazHaiderImg from '../assets/attemp2.png';
+import ijazHaiderImg from '../assets/ijaz.png';
 import { motion } from "framer-motion";
 
 type SocialLinks = {
@@ -261,12 +260,7 @@ const values = [
             Decom Robotics is assembling a team of engineers, researchers, and collaborators passionate about robotics, AI, and industrial automation. If you’re interested in shaping the future of intelligent systems, we’d love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/careers"
-              className="bg-[#702626] text-white hover:bg-blue-100 font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
-            >
-              View Careers <FiBriefcase className="ml-2" />
-            </Link>
+           
             <Link
               to="/contact"
               className="bg-transparent hover:bg-[#702626]/20 text-white font-bold py-3 px-8 rounded-lg border-2 border-white transition-all duration-300 flex items-center justify-center"

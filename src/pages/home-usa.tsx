@@ -219,7 +219,7 @@ const Home = () => {
             <ServiceCard
               icon={<FiLayers className="w-12 h-12" />}
               title="Modular Design"
-              description="Flexible, scalable robotics platforms that adapt to diverse applications—from industrial automation to intelligent consumer products."
+              description="Flexible, scalable robotics platforms that adapt to diverse applications from industrial automation to intelligent consumer products."
             />
           </div>
         </div>

@@ -23,10 +23,12 @@ L.Icon.Default.mergeOptions({
 });
 
 const Contact = () => {
+        // Office locations for "Visit Our Offices" section (only 2 offices)
         const officeLocations = [
                 {
                         id: 1,
                         city: 'Islamabad',
+                        country: 'Pakistan',
                         address: '5th Floor, Plaza 1, Paradise Commercial, Bahria Town, Islamabad, Pakistan',
                         phone: '+92 (303) 0595669',
                         email: 'info@decomrobotics.com',
@@ -36,11 +38,56 @@ const Contact = () => {
                 {
                         id: 2,
                         city: 'Eagan, MN',
+                        country: 'United States',
+                        address: '2817 Eagandale Blvd, Eagan, MN 55121, USA',
+                        phone: '+1 (651) 890-2369',
+                        email: 'info@decomrobotics.com',
+                        hours: 'Mon-Fri: 8am – 5pm (CST)',
+                        coords: [44.8539, -93.2320] as [number, number],
+                },
+                {
+                        id: 3,
+                        city: 'Dubai',
+                        country: 'United Arab Emirates',
+                        address: '6th Floor, Business Center, The Meydan Hotel GrandStand, Meydan Road, Nad Al Sheba, Dubai',
+                        phone: '+971556457287',
+                        email: 'info@decomrobotics.com',
+                        hours: 'Mon-Fri: 9:00 AM - 6:00 PM (GST)',
+                        coords: [25.1925, 55.3030] as [number, number],
+                },
+        ];
+
+        // All locations including Dubai for the map (3 locations)
+        const allMapLocations = [
+                {
+                        id: 1,
+                        city: 'Islamabad',
+                        country: 'Pakistan',
+                        address: '5th Floor, Plaza 1, Paradise Commercial, Bahria Town, Islamabad, Pakistan',
+                        phone: '+92 (303) 0595669',
+                        email: 'info@decomrobotics.com',
+                        hours: 'Mon-Fri: 9am – 6pm (PKT)',
+                        coords: [33.5461, 73.1350] as [number, number],
+                },
+                {
+                        id: 2,
+                        city: 'Eagan, MN',
+                        country: 'United States',
                         address: '2817 Eagandale Blvd, Eagan, MN 55121, USA',
                         phone: '+1 (555) 000-0000',
                         email: 'us@decomrobotics.com',
                         hours: 'Mon-Fri: 8am – 5pm (CST)',
                         coords: [44.8539, -93.2320] as [number, number],
+                },
+                {
+                        id: 3,
+                        city: 'Dubai',
+                        country: 'United Arab Emirates',
+                        address: '6th Floor, Business Center, The Meydan Hotel GrandStand, Meydan Road, Nad Al Sheba, Dubai',
+                        phone: '+971556457287',
+                        email: 'info@decomrobotics.com',
+                        hours: 'Mon-Fri: 9:00 AM - 6:00 PM (GST)',
+                        coords: [25.1925, 55.3030] as [number, number],
                 },
         ];
 
@@ -98,8 +145,8 @@ const Contact = () => {
                         </section>
 
                         {/* Office Locations */}
-                        <section className="min-h-screen flex items-center justify-center bg-[#110C11] px-4">
-                                <div className="max-w-4xl w-full">
+                        <section className="min-h-screen flex items-center justify-center bg-[#110C11] px-4 py-20">
+                                <div className="max-w-7xl w-full">
                                         <div className="text-center mb-10">
                                                 <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
                                                         OUR LOCATIONS
@@ -107,19 +154,20 @@ const Contact = () => {
                                                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-100">
                                                         Visit Our Offices
                                                 </h2>
-                                                <p className="text-lg text-gray-100">
-                                                        We're present globally stop by for a face-to-face conversation
+                                                <p className="text-lg text-gray-400">
+                                                        We're present globally, stop by for a face-to-face conversation
                                                 </p>
                                         </div>
 
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                                 {officeLocations.map((office) => (
                                                         <div
                                                                 key={office.id}
-                                                                className="bg-[#702626] rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden transform hover:scale-[1.02]"
+                                                                className="bg-[#702626] rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:scale-[1.02]"
                                                         >
-                                                               <div className="bg-gradient-to-r from-[#702626] to-[#5A1F1F] p-6 text-white rounded-t-3xl">
-                                                                        <h3 className="text-xl font-bold">{office.city}</h3>
+                                                                <div className="bg-gradient-to-r from-[#702626] to-[#5A1F1F] p-6 text-white rounded-t-3xl">
+                                                                        <h3 className="text-xl font-bold mb-1">{office.city}</h3>
+                                                                        <p className="text-sm text-gray-200 opacity-90">{office.country}</p>
                                                                 </div>
                                                                 <div className="p-6 space-y-4">
                                                                         <InfoItem icon={<FiMapPin />} text={office.address} />
@@ -134,7 +182,6 @@ const Contact = () => {
                                                                                 link={`mailto:${office.email}`}
                                                                         />
                                                                         <InfoItem icon={<FiClock />} text={office.hours} />
-
                                                                         <a
                                                                                 href="#map-section"
                                                                                 className="mt-4 inline-flex items-center text-blue-100 hover:text-blue-300 font-medium group transition-colors duration-200"
@@ -153,14 +200,21 @@ const Contact = () => {
                         <section id="map-section" className="py-20 bg-[#211A23]">
                                 <div className="container mx-auto px-4 sm:px-6">
                                         <div className="text-center mb-16">
-                                                <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">FIND US</span>
-                                                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-100">Our Global Presence</h2>
+                                                <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
+                                                        FIND US
+                                                </span>
+                                                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-100">
+                                                        Our Global Presence
+                                                </h2>
+                                                <p className="text-gray-400 max-w-2xl mx-auto">
+                                                        Operating across three continents to serve you better
+                                                </p>
                                         </div>
 
                                         <div className="bg-white p-4 rounded-lg shadow-xl max-w-6xl mx-auto">
-                                                <div className="rounded-lg overflow-hidden" style={{ height: '500px', width: '100%' }}>
+                                                <div className="rounded-lg overflow-hidden" style={{ height: '600px', width: '100%' }}>
                                                         <MapContainer 
-                                                                center={[39.0, 0.0] as [number, number]} 
+                                                                center={[30.0, 50.0] as [number, number]} 
                                                                 zoom={2} 
                                                                 scrollWheelZoom={true}
                                                                 style={{ height: '100%', width: '100%' }}
@@ -170,14 +224,36 @@ const Contact = () => {
                                                                         attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
                                                                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                                                                 />
-                                                                {officeLocations.map((office) => (
+                                                                {allMapLocations.map((office) => (
                                                                         <Marker key={office.id} position={office.coords}>
-                                                                                <Popup>
-                                                                                        <div className="p-2">
-                                                                                                <strong className="text-lg">Decom Robotics L.L.C</strong><br />
-                                                                                                <strong className="text-blue-600">{office.city}</strong><br />
-                                                                                                <span className="text-sm">{office.address}</span><br />
-                                                                                                <span className="text-sm text-gray-600">{office.phone}</span>
+                                                                                <Popup maxWidth={300}>
+                                                                                        <div className="p-3">
+                                                                                                <strong className="text-lg block mb-1">
+                                                                                                        Decom Robotics L.L.C
+                                                                                                </strong>
+                                                                                                <strong className="text-blue-600 block mb-2">
+                                                                                                        {office.city}, {office.country}
+                                                                                                </strong>
+                                                                                                <span className="text-sm block mb-2 text-gray-700">
+                                                                                                        {office.address}
+                                                                                                </span>
+                                                                                                <div className="border-t pt-2 space-y-1">
+                                                                                                        <a 
+                                                                                                                href={`tel:${office.phone.replace(/\D/g, '')}`}
+                                                                                                                className="text-sm text-gray-600 hover:text-blue-600 block"
+                                                                                                        >
+                                                                                                                📞 {office.phone}
+                                                                                                        </a>
+                                                                                                        <a 
+                                                                                                                href={`mailto:${office.email}`}
+                                                                                                                className="text-sm text-gray-600 hover:text-blue-600 block"
+                                                                                                        >
+                                                                                                                ✉️ {office.email}
+                                                                                                        </a>
+                                                                                                        <span className="text-sm text-gray-600 block">
+                                                                                                                🕐 {office.hours}
+                                                                                                        </span>
+                                                                                                </div>
                                                                                         </div>
                                                                                 </Popup>
                                                                         </Marker>
@@ -194,7 +270,7 @@ const Contact = () => {
                                         <div className="text-center mb-16">
                                                 <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">FAQs</span>
                                                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-100">Frequently Asked Questions</h2>
-                                                <p className="text-lg text-gray-100 max-w-3xl mx-auto">
+                                                <p className="text-lg text-gray-400 max-w-3xl mx-auto">
                                                         Find answers to common questions about working with Decom Robotics
                                                 </p>
                                         </div>
@@ -244,12 +320,12 @@ const Contact = () => {
                                                         >
                                                                 Get in Touch <FiMail className="ml-2" />
                                                         </a>
-                                                        <a
-                                                                href="tel:+920000000000"
+                                                        {/* <a
+                                                                href="tel:+923030595669"
                                                                 className="bg-transparent hover:bg-[#18202A]/20 text-white font-bold py-3 px-8 rounded-lg border-2 border-white transition-all duration-300 flex items-center justify-center"
                                                         >
                                                                 Call Us Now <FiPhone className="ml-2" />
-                                                        </a>
+                                                        </a> */}
                                                 </div>
                                         </div>
                                 </div>
@@ -260,7 +336,7 @@ const Contact = () => {
 
 // Helper Components
 const ContactCard = ({ icon, title, content, text, action, link = '', featured = false }: { icon: JSX.Element; title: string; content: string; text: string; action: string; link?: string; featured?: boolean }) => (
-        <div className={`bg-[#702626] rounded-lg shadow-lg p-6 flex flex-col ${featured ? 'transform -translate-y-2  relative z-10 shadow-xl' : ''}`}>
+        <div className={`bg-[#702626] rounded-lg shadow-lg p-6 flex flex-col ${featured ? 'transform -translate-y-2 relative z-10 shadow-xl' : ''}`}>
                 <div className={`w-16 h-16 rounded-full mb-6 flex items-center justify-center ${featured ? 'bg-[#01313F] text-white' : 'bg-blue-100 text-blue-300'}`}>
                         <span className="text-2xl">{icon}</span>
                 </div>
@@ -281,17 +357,19 @@ const ContactCard = ({ icon, title, content, text, action, link = '', featured =
 
 const InfoItem = ({ icon, text, link }: { icon: JSX.Element; text: string; link?: string }) => {
         const content = (
-                <div className="flex items-start mb-4">
-                        <span className="text-blue-400 mt-1 mr-3">{icon}</span>
+                <div className="flex items-start">
+                        <span className="text-blue-400 mt-1 mr-3 flex-shrink-0">{icon}</span>
                         <span className="text-gray-100">{text}</span>
                 </div>
         );
 
         return link ? (
-                <a href={link} className="hover:text-blue-600 transition-colors duration-300">
+                <a href={link} className="hover:text-blue-300 transition-colors duration-300 block">
                         {content}
                 </a>
-        ) : content;
+        ) : (
+                <div>{content}</div>
+        );
 };
 
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => (

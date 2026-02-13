@@ -32,8 +32,8 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               className={({ isActive }) =>
-                `hover:text-[#702626] ${
-                  isActive ? 'text-[#702626] font-semibold' : ''
+                `hover:text-[#c5edf7e4] ${
+                  isActive ? 'text-[#0890c5] font-semibold' : ''
                 }`
               }
             >

@@ -38,9 +38,22 @@ const Footer = () => {
               efficient, and future-ready industrial systems.
             </p>
 
-            <div className="flex items-center text-sm text-blue-300 mt-4">
-              <FiClock className="mr-2" />
-              Mon–Fri: 9am – 6pm
+            <div className="mt-6 space-y-2">
+              <div className="flex items-center text-sm font-semibold text-blue-100 mb-3">
+                <FiClock className="mr-2" />
+                Business Hours
+              </div>
+              <div className="text-sm text-blue-200 space-y-1.5 ml-6">
+                <div>
+                  <span className="font-medium text-blue-100">United States:</span> Mon–Fri, 9:00 AM – 5:00 PM (CST)
+                </div>
+                <div>
+                  <span className="font-medium text-blue-100">Dubai, UAE:</span> Sun–Thu, 9:00 AM – 6:00 PM (GST)
+                </div>
+                <div>
+                  <span className="font-medium text-blue-100">Pakistan:</span> Mon–Fri, 9:00 AM – 6:00 PM (PKT)
+                </div>
+              </div>
             </div>
           </div>
 
@@ -77,13 +90,21 @@ const Footer = () => {
 
             <ul className="space-y-4">
               <li className="flex items-start">
-                <FiMapPin className="w-5 h-5 mr-3 mt-1 text-blue-400" />
-                <span className="text-blue-200">
-                  US:
-                  2817 Eagandale Blvd, Eagan, MN 55121
-                  Pakistan:
-                  5th Floor, Plaza 1, Paradise Commercial, Bahria Town, Islamabad.
-                </span>
+                <FiMapPin className="w-5 h-5 mr-3 mt-1 text-blue-400 flex-shrink-0" />
+                <div className="text-blue-200 space-y-3">
+                  <div>
+                    <div className="font-semibold text-blue-100 mb-1">United States</div>
+                    <div>2817 Eagandale Blvd, Eagan, MN 55121</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-blue-100 mb-1">Dubai, UAE</div>
+                    <div>6th Floor, Business Center, The Meydan Hotel GrandStand, Meydan Road, Nad Al Sheba, Dubai</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-blue-100 mb-1">Pakistan</div>
+                    <div>5th Floor, Plaza 1, Paradise Commercial, Bahria Town, Islamabad</div>
+                  </div>
+                </div>
               </li>
 
               <li className="flex items-center">
