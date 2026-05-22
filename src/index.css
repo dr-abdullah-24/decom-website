@@ -1,1 +1,259 @@
 @import "tailwindcss";
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: #000;
+    color: #f0f0f0;
+    font-family: 'Inter', 'SF Pro Display', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: rgba(204,36,36,0.3); color: #fff; }
+
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: #000; }
+  ::-webkit-scrollbar-thumb { background: #cc2424; }
+}
+
+/* ── Keyframes ── */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes grid-drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(204,36,36,0.6); }
+  50%       { opacity: 0.7; transform: scale(1.2); box-shadow: 0 0 0 6px rgba(204,36,36,0); }
+}
+
+@keyframes scan-h {
+  0%   { top: 0; }
+  100% { top: 100%; }
+}
+
+@keyframes rotate-ring {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes data-flow {
+  0%         { stroke-dashoffset: 100; opacity: 0; }
+  10%        { opacity: 1; }
+  90%        { opacity: 1; }
+  100%       { stroke-dashoffset: 0; opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes border-run {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* ── Utility ── */
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(204,36,36,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(204,36,36,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-drift 12s linear infinite;
+}
+
+.cyber-grid-white {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+.marquee-track-slow {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 50s linear infinite;
+  will-change: transform;
+}
+
+.gradient-text {
+  background: linear-gradient(110deg, #ff4444, #cc2424, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    110deg,
+    #fff 20%,
+    #cc2424 40%,
+    #fff 60%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #cc2424;
+}
+.section-tag::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: #cc2424;
+  display: block;
+}
+
+.btn-red {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #cc2424;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.btn-red::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+.btn-red:hover::after { transform: translateX(100%); }
+.btn-red:hover { background: #e02828; box-shadow: 0 0 30px rgba(204,36,36,0.5); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.btn-ghost:hover {
+  border-color: #cc2424;
+  color: #cc2424;
+}
+
+/* Bento tiles */
+.bento-tile {
+  background: #0a0000;
+  border: 1px solid rgba(204,36,36,0.12);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.bento-tile:hover {
+  border-color: rgba(204,36,36,0.4);
+  background: #0f0000;
+}
+.bento-tile::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 2px;
+  background: linear-gradient(90deg, #cc2424, #8b5cf6);
+  transition: width 0.4s ease;
+}
+.bento-tile:hover::before { width: 100%; }
+
+/* Scan line */
+.scan-line {
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(204,36,36,0.5), transparent);
+  animation: scan-h 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Rotating ring */
+.ring-rotate { animation: rotate-ring 20s linear infinite; }
+.ring-rotate-rev { animation: rotate-ring 15s linear infinite reverse; }
+
+/* Float animation */
+.float-anim { animation: float 4s ease-in-out infinite; }
+
+/* Pulse dot */
+.pulse-dot {
+  width: 8px; height: 8px;
+  background: #cc2424;
+  border-radius: 50%;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Stats number display */
+.stat-num {
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+/* Terminal text */
+.terminal-text {
+  font-family: 'Courier New', 'Lucida Console', monospace;
+  font-size: 0.75rem;
+  color: rgba(204,36,36,0.6);
+  letter-spacing: 0.1em;
+}
