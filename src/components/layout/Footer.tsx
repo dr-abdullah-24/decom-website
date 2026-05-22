@@ -25,13 +25,13 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer style={{ background: '#030308', borderTop: '1px solid rgba(204,36,36,0.12)' }}>
+    <footer style={{ background: '#030308', borderTop: '1px solid rgba(232,53,53,0.12)' }}>
       {/* System status bar */}
       <div
         className="py-2 px-6 flex flex-wrap items-center justify-between gap-4 text-xs"
-        style={{ borderBottom: '1px solid rgba(204,36,36,0.07)' }}
+        style={{ borderBottom: '1px solid rgba(232,53,53,0.07)' }}
       >
-        <div className="flex items-center gap-6" style={{ color: 'rgba(204,36,36,0.45)' }}>
+        <div className="flex items-center gap-6" style={{ color: 'rgba(232,53,53,0.45)' }}>
           {[
             { label: 'AI.CORE',    val: 'ONLINE' },
             { label: 'AUTONOMY',   val: 'L4+' },
@@ -43,13 +43,13 @@ const Footer = () => {
             </span>
           ))}
         </div>
-        <div className="flex items-center gap-2" style={{ color: 'rgba(204,36,36,0.45)', letterSpacing: '0.12em' }}>
+        <div className="flex items-center gap-2" style={{ color: 'rgba(232,53,53,0.45)', letterSpacing: '0.12em' }}>
           <div
             style={{
               width: 5, height: 5,
-              background: '#cc2424',
+              background: '#e83535',
               borderRadius: '50%',
-              boxShadow: '0 0 6px #cc2424',
+              boxShadow: '0 0 6px #e83535',
               animation: 'pulse-glow 1.5s ease-in-out infinite',
             }}
           />
@@ -70,7 +70,7 @@ const Footer = () => {
                   width: 40,
                   height: 40,
                   objectFit: 'contain',
-                  filter: 'brightness(0) invert(1) drop-shadow(0 0 5px rgba(204,36,36,0.7))',
+                  filter: 'brightness(0) invert(1) drop-shadow(0 0 5px rgba(232,53,53,0.7))',
                 }}
               />
               <div>
@@ -99,20 +99,20 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="p-2 transition-all"
                   style={{
-                    color: 'rgba(204,36,36,0.45)',
-                    border: '1px solid rgba(204,36,36,0.14)',
+                    color: 'rgba(232,53,53,0.45)',
+                    border: '1px solid rgba(232,53,53,0.14)',
                     borderRadius: '2px',
                   }}
                   onMouseEnter={e => {
                     const el = e.currentTarget as HTMLElement;
                     el.style.color = '#e03333';
-                    el.style.borderColor = 'rgba(204,36,36,0.5)';
-                    el.style.boxShadow = '0 0 12px rgba(204,36,36,0.2)';
+                    el.style.borderColor = 'rgba(232,53,53,0.5)';
+                    el.style.boxShadow = '0 0 12px rgba(232,53,53,0.2)';
                   }}
                   onMouseLeave={e => {
                     const el = e.currentTarget as HTMLElement;
-                    el.style.color = 'rgba(204,36,36,0.45)';
-                    el.style.borderColor = 'rgba(204,36,36,0.14)';
+                    el.style.color = 'rgba(232,53,53,0.45)';
+                    el.style.borderColor = 'rgba(232,53,53,0.14)';
                     el.style.boxShadow = 'none';
                   }}
                 >
@@ -141,7 +141,7 @@ const Footer = () => {
                     onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = '#f0f4ff')}
                     onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = 'rgba(200,210,230,0.5)')}
                   >
-                    <span style={{ color: 'rgba(204,36,36,0.4)', fontSize: '0.6rem' }}>▶</span>
+                    <span style={{ color: 'rgba(232,53,53,0.4)', fontSize: '0.6rem' }}>▶</span>
                     {link.label}
                   </Link>
                 </li>
@@ -157,7 +157,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {['Neural AI Core', 'Computer Vision', 'Autonomous Navigation', 'Modular Robotics', 'Edge AI Inference'].map((item, i) => (
                 <li key={i} className="text-sm" style={{ color: 'rgba(200,210,230,0.5)' }}>
-                  <span style={{ color: 'rgba(204,36,36,0.4)', fontSize: '0.6rem', marginRight: 8 }}>▶</span>
+                  <span style={{ color: 'rgba(232,53,53,0.4)', fontSize: '0.6rem', marginRight: 8 }}>▶</span>
                   {item}
                 </li>
               ))}
@@ -177,7 +177,7 @@ const Footer = () => {
                 { label: 'Dubai, UAE',     val: '+971 55 645 7287',       href: 'tel:+971556457287' },
               ].map((c, i) => (
                 <div key={i}>
-                  <div className="text-xs font-bold mb-1" style={{ color: 'rgba(204,36,36,0.45)', letterSpacing: '0.1em' }}>
+                  <div className="text-xs font-bold mb-1" style={{ color: 'rgba(232,53,53,0.45)', letterSpacing: '0.1em' }}>
                     {c.label}
                   </div>
                   <a
@@ -198,7 +198,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div
           className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-xs"
-          style={{ borderTop: '1px solid rgba(204,36,36,0.08)', color: 'rgba(200,210,230,0.3)' }}
+          style={{ borderTop: '1px solid rgba(232,53,53,0.08)', color: 'rgba(200,210,230,0.3)' }}
         >
           <span>© {year} Decom Robotics L.L.C. All rights reserved.</span>
           <div className="flex gap-6">

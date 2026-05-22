@@ -22,7 +22,7 @@ const offices = [
     email: 'info@decomrobotics.com',
     hours: 'Mon–Fri  09:00 – 18:00  PKT',
     coords: [33.5461, 73.1350] as [number, number],
-    accent: '#cc2424',
+    accent: '#e83535',
   },
   {
     id: 2,
@@ -46,7 +46,7 @@ const offices = [
     email: 'info@decomrobotics.com',
     hours: 'Mon–Fri  09:00 – 18:00  GST',
     coords: [25.1925, 55.3030] as [number, number],
-    accent: '#cc2424',
+    accent: '#e83535',
   },
 ];
 
@@ -65,7 +65,7 @@ const FAQItem = ({ q, a }: { q: string; a: string }) => {
       className="relative overflow-hidden transition-all duration-300"
       style={{
         background: 'rgba(10,12,20,0.8)',
-        border: `1px solid ${open ? 'rgba(204,36,36,0.3)' : 'rgba(204,36,36,0.1)'}`,
+        border: `1px solid ${open ? 'rgba(232,53,53,0.3)' : 'rgba(232,53,53,0.1)'}`,
         borderRadius: '4px',
       }}
     >
@@ -73,14 +73,14 @@ const FAQItem = ({ q, a }: { q: string; a: string }) => {
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between p-6 text-left"
       >
-        <span className="font-bold text-sm pr-8" style={{ color: open ? '#cc2424' : '#f0f4ff' }}>
+        <span className="font-bold text-sm pr-8" style={{ color: open ? '#e83535' : '#f0f4ff' }}>
           {q}
         </span>
         <svg
           width="18" height="18" viewBox="0 0 18 18" fill="none"
           style={{
             flexShrink: 0,
-            color: '#cc2424',
+            color: '#e83535',
             transform: open ? 'rotate(45deg)' : 'rotate(0deg)',
             transition: 'transform 0.3s ease',
           }}
@@ -97,7 +97,7 @@ const FAQItem = ({ q, a }: { q: string; a: string }) => {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="px-6 pb-6 text-sm leading-relaxed" style={{ color: 'rgba(200,210,230,0.6)', borderTop: '1px solid rgba(204,36,36,0.08)' }}>
+            <div className="px-6 pb-6 text-sm leading-relaxed" style={{ color: 'rgba(200,210,230,0.6)', borderTop: '1px solid rgba(232,53,53,0.08)' }}>
               <div className="pt-4">{a}</div>
             </div>
           </motion.div>
@@ -150,8 +150,8 @@ const Contact = () => {
               {
                 icon: (
                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                    <rect x="2" y="2" width="24" height="24" rx="2" stroke="#cc2424" strokeWidth="1.5" fill="rgba(204,36,36,0.05)"/>
-                    <path d="M2 8 L14 16 L26 8" stroke="#cc2424" strokeWidth="1.5"/>
+                    <rect x="2" y="2" width="24" height="24" rx="2" stroke="#e83535" strokeWidth="1.5" fill="rgba(232,53,53,0.05)"/>
+                    <path d="M2 8 L14 16 L26 8" stroke="#e83535" strokeWidth="1.5"/>
                   </svg>
                 ),
                 title: 'Email Us',
@@ -159,7 +159,7 @@ const Contact = () => {
                 sub: 'Response within 24 hours',
                 link: 'mailto:info@decomrobotics.com',
                 action: 'Send Email',
-                accent: '#cc2424',
+                accent: '#e83535',
               },
               {
                 icon: (
@@ -177,9 +177,9 @@ const Contact = () => {
               {
                 icon: (
                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                    <circle cx="14" cy="12" r="6" stroke="#cc2424" strokeWidth="1.5" fill="rgba(204,36,36,0.05)"/>
-                    <path d="M8 18 Q14 28 20 18" stroke="#cc2424" strokeWidth="1.5" fill="none"/>
-                    <circle cx="14" cy="12" r="2" fill="#cc2424"/>
+                    <circle cx="14" cy="12" r="6" stroke="#e83535" strokeWidth="1.5" fill="rgba(232,53,53,0.05)"/>
+                    <path d="M8 18 Q14 28 20 18" stroke="#e83535" strokeWidth="1.5" fill="none"/>
+                    <circle cx="14" cy="12" r="2" fill="#e83535"/>
                   </svg>
                 ),
                 title: 'Visit Us',
@@ -187,7 +187,7 @@ const Contact = () => {
                 sub: 'US · UAE · Pakistan',
                 link: '#offices',
                 action: 'See Locations',
-                accent: '#cc2424',
+                accent: '#e83535',
               },
             ].map((card, i) => (
               <motion.div
@@ -314,9 +314,9 @@ const Contact = () => {
           <div
             className="overflow-hidden"
             style={{
-              border: '1px solid rgba(204,36,36,0.15)',
+              border: '1px solid rgba(232,53,53,0.15)',
               borderRadius: '4px',
-              boxShadow: '0 0 40px rgba(204,36,36,0.05)',
+              boxShadow: '0 0 40px rgba(232,53,53,0.05)',
             }}
           >
             <div style={{ height: 500, width: '100%' }}>
@@ -383,7 +383,7 @@ const Contact = () => {
         className="py-24 relative overflow-hidden"
         style={{
           background: 'linear-gradient(135deg, #050510 0%, #0a0520 50%, #050510 100%)',
-          borderTop: '1px solid rgba(204,36,36,0.1)',
+          borderTop: '1px solid rgba(232,53,53,0.1)',
         }}
       >
         <div className="absolute inset-0 cyber-grid opacity-30" />

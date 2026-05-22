@@ -7,28 +7,28 @@ import ijazHaiderImg from '../assets/ijaz.png';
 /* ── icons ── */
 const IconZap = () => (
   <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-    <polygon points="18,3 8,18 15,18 14,29 24,14 17,14" stroke="currentColor" strokeWidth="1.5" fill="rgba(204,36,36,0.08)"/>
+    <polygon points="18,3 8,18 15,18 14,29 24,14 17,14" stroke="currentColor" strokeWidth="1.5" fill="rgba(232,53,53,0.08)"/>
     <circle cx="18" cy="3" r="1.5" fill="currentColor" opacity="0.6"/>
     <circle cx="14" cy="29" r="1.5" fill="#8b5cf6" opacity="0.6"/>
   </svg>
 );
 const IconShield = () => (
   <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-    <path d="M16 3 L28 8 L28 18 Q28 26 16 30 Q4 26 4 18 L4 8 Z" stroke="currentColor" strokeWidth="1.5" fill="rgba(204,36,36,0.06)"/>
+    <path d="M16 3 L28 8 L28 18 Q28 26 16 30 Q4 26 4 18 L4 8 Z" stroke="currentColor" strokeWidth="1.5" fill="rgba(232,53,53,0.06)"/>
     <path d="M11 16 L14.5 19.5 L21 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 const IconAward = () => (
   <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-    <circle cx="16" cy="13" r="9" stroke="currentColor" strokeWidth="1.5" fill="rgba(204,36,36,0.06)"/>
+    <circle cx="16" cy="13" r="9" stroke="currentColor" strokeWidth="1.5" fill="rgba(232,53,53,0.06)"/>
     <path d="M11 20 L8 28 L16 24 L24 28 L21 20" stroke="#8b5cf6" strokeWidth="1.5" fill="rgba(139,92,246,0.08)"/>
-    <circle cx="16" cy="13" r="4" stroke="currentColor" strokeWidth="1" fill="rgba(204,36,36,0.15)"/>
+    <circle cx="16" cy="13" r="4" stroke="currentColor" strokeWidth="1" fill="rgba(232,53,53,0.15)"/>
     <circle cx="16" cy="13" r="1.5" fill="currentColor"/>
   </svg>
 );
 const IconUsers = () => (
   <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-    <circle cx="11" cy="11" r="5" stroke="currentColor" strokeWidth="1.5" fill="rgba(204,36,36,0.06)"/>
+    <circle cx="11" cy="11" r="5" stroke="currentColor" strokeWidth="1.5" fill="rgba(232,53,53,0.06)"/>
     <circle cx="22" cy="11" r="5" stroke="#8b5cf6" strokeWidth="1.5" fill="rgba(139,92,246,0.06)"/>
     <path d="M3 26 Q3 20 11 20 Q19 20 19 26" stroke="currentColor" strokeWidth="1.5" fill="none"/>
     <path d="M19 22 Q19 20 22 20 Q29 20 29 26" stroke="#8b5cf6" strokeWidth="1.5" fill="none"/>
@@ -73,7 +73,7 @@ const teamMembers = [
     social: { linkedin: 'https://www.linkedin.com/in/ali-i-5306b597/', twitter: 'https://x.com/57f588061640421' },
     image: aliIkramImg,
     tag: 'FOUNDER',
-    accent: '#cc2424',
+    accent: '#e83535',
   },
   {
     id: 2,
@@ -99,18 +99,18 @@ export default function About() {
       {/* ══ HERO ══ */}
       <section style={{ minHeight: '72vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', paddingTop: 64, background: '#000' }}>
         <div className="absolute inset-0 cyber-grid opacity-30 pointer-events-none" />
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 20% 60%, rgba(204,36,36,0.05) 0%, transparent 60%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 20% 60%, rgba(232,53,53,0.05) 0%, transparent 60%)', pointerEvents: 'none' }} />
 
         {/* giant watermark */}
-        <div style={{ position: 'absolute', top: 40, right: -40, fontWeight: 900, fontSize: '22vw', color: 'rgba(204,36,36,0.025)', letterSpacing: '-0.06em', lineHeight: 1, pointerEvents: 'none', userSelect: 'none' }}>
+        <div style={{ position: 'absolute', top: 40, right: -40, fontWeight: 900, fontSize: '22vw', color: 'rgba(232,53,53,0.025)', letterSpacing: '-0.06em', lineHeight: 1, pointerEvents: 'none', userSelect: 'none' }}>
           ABOUT
         </div>
 
         {/* rotating hex */}
         <div className="absolute right-8 top-24 opacity-10 pointer-events-none hidden lg:block">
           <svg className="ring-rotate" width="420" height="420" viewBox="0 0 420 420" fill="none" style={{ transformOrigin: '210px 210px' }}>
-            <polygon points="210,20 390,115 390,305 210,400 30,305 30,115" stroke="#cc2424" strokeWidth="0.8" strokeDasharray="6 8"/>
-            <polygon points="210,60 350,135 350,285 210,360 70,285 70,135"  stroke="#cc2424" strokeWidth="0.5" strokeDasharray="3 12" opacity="0.5"/>
+            <polygon points="210,20 390,115 390,305 210,400 30,305 30,115" stroke="#e83535" strokeWidth="0.8" strokeDasharray="6 8"/>
+            <polygon points="210,60 350,135 350,285 210,360 70,285 70,135"  stroke="#e83535" strokeWidth="0.5" strokeDasharray="3 12" opacity="0.5"/>
           </svg>
         </div>
 
@@ -128,7 +128,7 @@ export default function About() {
           </motion.h1>
 
           <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.9, delay: 0.5 }}
-            style={{ height: 1, background: 'linear-gradient(90deg, #cc2424 40%, transparent)', margin: '40px 0', transformOrigin: 'left' }} />
+            style={{ height: 1, background: 'linear-gradient(90deg, #e83535 40%, transparent)', margin: '40px 0', transformOrigin: 'left' }} />
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.65 }}
             style={{ fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', color: 'rgba(200,200,200,0.5)', lineHeight: 1.8, maxWidth: 560 }}>
@@ -141,10 +141,10 @@ export default function About() {
       <section style={{ background: '#000', position: 'relative' }}>
 
         {/* full-bleed strip */}
-        <div style={{ background: '#080000', borderTop: '1px solid rgba(204,36,36,0.1)', borderBottom: '1px solid rgba(204,36,36,0.06)', padding: '22px 40px', display: 'flex', alignItems: 'center', gap: 20 }}>
+        <div style={{ background: '#080000', borderTop: '1px solid rgba(232,53,53,0.1)', borderBottom: '1px solid rgba(232,53,53,0.06)', padding: '22px 40px', display: 'flex', alignItems: 'center', gap: 20 }}>
           <span style={{ fontWeight: 900, fontSize: 'clamp(1.4rem, 3vw, 2.5rem)', color: '#fff', letterSpacing: '-0.03em', lineHeight: 1, whiteSpace: 'nowrap' }}>OUR PURPOSE</span>
-          <div style={{ flex: 1, height: 1, background: 'linear-gradient(90deg, rgba(204,36,36,0.35), transparent)', minWidth: 40 }} />
-          <span style={{ fontSize: '0.58rem', fontWeight: 800, letterSpacing: '0.25em', color: 'rgba(204,36,36,0.4)', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>EST. 2024</span>
+          <div style={{ flex: 1, height: 1, background: 'linear-gradient(90deg, rgba(232,53,53,0.35), transparent)', minWidth: 40 }} />
+          <span style={{ fontSize: '0.58rem', fontWeight: 800, letterSpacing: '0.25em', color: 'rgba(232,53,53,0.4)', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>EST. 2024</span>
         </div>
 
         <div style={{ display: 'grid', maxWidth: '100%' }} className="lg:grid-cols-2">
@@ -152,15 +152,15 @@ export default function About() {
           {/* MISSION */}
           <motion.div
             initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-            style={{ padding: 'clamp(48px, 6vw, 96px) clamp(32px, 5vw, 80px)', borderRight: '1px solid rgba(204,36,36,0.07)', borderBottom: '1px solid rgba(204,36,36,0.07)', position: 'relative', overflow: 'hidden' }}>
+            style={{ padding: 'clamp(48px, 6vw, 96px) clamp(32px, 5vw, 80px)', borderRight: '1px solid rgba(232,53,53,0.07)', borderBottom: '1px solid rgba(232,53,53,0.07)', position: 'relative', overflow: 'hidden' }}>
             {/* large faint label behind */}
-            <div style={{ position: 'absolute', bottom: -20, left: -10, fontWeight: 900, fontSize: '8rem', color: 'rgba(204,36,36,0.03)', letterSpacing: '-0.06em', lineHeight: 1, pointerEvents: 'none', userSelect: 'none' }}>
+            <div style={{ position: 'absolute', bottom: -20, left: -10, fontWeight: 900, fontSize: '8rem', color: 'rgba(232,53,53,0.03)', letterSpacing: '-0.06em', lineHeight: 1, pointerEvents: 'none', userSelect: 'none' }}>
               M
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 32 }}>
-              <div style={{ width: 2, height: 36, background: '#cc2424' }} />
+              <div style={{ width: 2, height: 36, background: '#e83535' }} />
               <div>
-                <div style={{ fontSize: '0.55rem', fontWeight: 800, letterSpacing: '0.28em', color: '#cc2424', textTransform: 'uppercase' }}>Mission</div>
+                <div style={{ fontSize: '0.55rem', fontWeight: 800, letterSpacing: '0.28em', color: '#e83535', textTransform: 'uppercase' }}>Mission</div>
                 <div style={{ fontWeight: 900, fontSize: 'clamp(1.6rem, 3vw, 2.5rem)', color: '#fff', letterSpacing: '-0.03em', lineHeight: 1 }}>What We Do</div>
               </div>
             </div>
@@ -171,8 +171,8 @@ export default function About() {
             <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
               {[['L4+','Autonomy'],['<10ms','AI Latency'],['100%','AI-Native']].map(([v,l]) => (
                 <div key={l}>
-                  <div style={{ fontWeight: 900, fontSize: '1.8rem', color: '#cc2424', letterSpacing: '-0.04em', lineHeight: 1 }}>{v}</div>
-                  <div style={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.14em', color: 'rgba(204,36,36,0.5)', textTransform: 'uppercase', marginTop: 4 }}>{l}</div>
+                  <div style={{ fontWeight: 900, fontSize: '1.8rem', color: '#e83535', letterSpacing: '-0.04em', lineHeight: 1 }}>{v}</div>
+                  <div style={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.14em', color: 'rgba(232,53,53,0.5)', textTransform: 'uppercase', marginTop: 4 }}>{l}</div>
                 </div>
               ))}
             </div>
@@ -181,7 +181,7 @@ export default function About() {
           {/* VISION */}
           <motion.div
             initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-            style={{ padding: 'clamp(48px, 6vw, 96px) clamp(32px, 5vw, 80px)', borderBottom: '1px solid rgba(204,36,36,0.07)', background: 'rgba(139,92,246,0.02)', position: 'relative', overflow: 'hidden' }}>
+            style={{ padding: 'clamp(48px, 6vw, 96px) clamp(32px, 5vw, 80px)', borderBottom: '1px solid rgba(232,53,53,0.07)', background: 'rgba(139,92,246,0.02)', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', bottom: -20, right: -10, fontWeight: 900, fontSize: '8rem', color: 'rgba(139,92,246,0.03)', letterSpacing: '-0.06em', lineHeight: 1, pointerEvents: 'none', userSelect: 'none' }}>
               V
             </div>
@@ -214,7 +214,7 @@ export default function About() {
       </section>
 
       {/* ══ CORE VALUES — interactive horizontal bands ══ */}
-      <section style={{ background: '#000', borderTop: '1px solid rgba(204,36,36,0.08)' }}>
+      <section style={{ background: '#000', borderTop: '1px solid rgba(232,53,53,0.08)' }}>
 
         <div style={{ padding: '40px 40px 0', maxWidth: 1400, margin: '0 auto' }}>
           <div className="section-tag" style={{ marginBottom: 12 }}>Core Values</div>
@@ -245,8 +245,8 @@ export default function About() {
                 gap: 32,
                 alignItems: 'center',
                 padding: '28px 40px',
-                borderTop: '1px solid rgba(204,36,36,0.07)',
-                background: hovered === i ? 'rgba(204,36,36,0.03)' : 'transparent',
+                borderTop: '1px solid rgba(232,53,53,0.07)',
+                background: hovered === i ? 'rgba(232,53,53,0.03)' : 'transparent',
                 transition: 'background 0.3s',
                 cursor: 'default',
                 position: 'relative',
@@ -257,10 +257,10 @@ export default function About() {
               <motion.div
                 animate={{ scaleX: hovered === i ? 1 : 0 }}
                 transition={{ duration: 0.3 }}
-                style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 2, background: '#cc2424', transformOrigin: 'top' }} />
+                style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 2, background: '#e83535', transformOrigin: 'top' }} />
 
               {/* number */}
-              <span style={{ fontWeight: 900, fontSize: '0.62rem', letterSpacing: '0.2em', color: hovered === i ? '#cc2424' : 'rgba(204,36,36,0.3)', transition: 'color 0.3s', fontFamily: 'monospace' }}>
+              <span style={{ fontWeight: 900, fontSize: '0.62rem', letterSpacing: '0.2em', color: hovered === i ? '#e83535' : 'rgba(232,53,53,0.3)', transition: 'color 0.3s', fontFamily: 'monospace' }}>
                 {v.num}
               </span>
 
@@ -278,17 +278,17 @@ export default function About() {
               </p>
 
               {/* icon */}
-              <div style={{ color: hovered === i ? '#cc2424' : 'rgba(204,36,36,0.3)', transition: 'color 0.3s', flexShrink: 0 }}>
+              <div style={{ color: hovered === i ? '#e83535' : 'rgba(232,53,53,0.3)', transition: 'color 0.3s', flexShrink: 0 }}>
                 {v.icon}
               </div>
             </motion.div>
           ))}
-          <div style={{ borderTop: '1px solid rgba(204,36,36,0.07)' }} />
+          <div style={{ borderTop: '1px solid rgba(232,53,53,0.07)' }} />
         </div>
       </section>
 
       {/* ══ TEAM — full-width editorial panels ══ */}
-      <section style={{ background: '#000', borderTop: '1px solid rgba(204,36,36,0.08)' }}>
+      <section style={{ background: '#000', borderTop: '1px solid rgba(232,53,53,0.08)' }}>
 
         <div style={{ padding: '60px 40px 0', maxWidth: 1400, margin: '0 auto', display: 'flex', alignItems: 'baseline', gap: 24, flexWrap: 'wrap' }}>
           <div>
@@ -308,7 +308,7 @@ export default function About() {
                 display: 'grid',
                 gridTemplateColumns: i % 2 === 0 ? '420px 1fr' : '1fr 420px',
                 minHeight: '55vh',
-                borderTop: '1px solid rgba(204,36,36,0.08)',
+                borderTop: '1px solid rgba(232,53,53,0.08)',
                 position: 'relative',
                 overflow: 'hidden',
               }}
@@ -427,12 +427,12 @@ export default function About() {
       </section>
 
       {/* ══ CTA ══ */}
-      <section style={{ background: '#000', padding: '120px 40px', position: 'relative', overflow: 'hidden', borderTop: '1px solid rgba(204,36,36,0.08)' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 100%, rgba(204,36,36,0.06) 0%, transparent 60%)', pointerEvents: 'none' }} />
+      <section style={{ background: '#000', padding: '120px 40px', position: 'relative', overflow: 'hidden', borderTop: '1px solid rgba(232,53,53,0.08)' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 100%, rgba(232,53,53,0.06) 0%, transparent 60%)', pointerEvents: 'none' }} />
         <div className="absolute inset-0 cyber-grid opacity-20 pointer-events-none" />
 
         {/* ghost text */}
-        <div style={{ position: 'absolute', bottom: -40, left: -30, fontWeight: 900, fontSize: '20vw', color: 'rgba(204,36,36,0.025)', letterSpacing: '-0.06em', lineHeight: 1, pointerEvents: 'none', userSelect: 'none', whiteSpace: 'nowrap' }}>
+        <div style={{ position: 'absolute', bottom: -40, left: -30, fontWeight: 900, fontSize: '20vw', color: 'rgba(232,53,53,0.025)', letterSpacing: '-0.06em', lineHeight: 1, pointerEvents: 'none', userSelect: 'none', whiteSpace: 'nowrap' }}>
           JOIN US
         </div>
 
@@ -454,9 +454,9 @@ export default function About() {
               <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </Link>
             <a href="mailto:info@decomrobotics.com"
-              style={{ fontSize: '0.68rem', color: 'rgba(204,36,36,0.5)', textDecoration: 'none', letterSpacing: '0.05em', display: 'flex', alignItems: 'center', gap: 8, justifyContent: 'center', paddingTop: 8, transition: 'color 0.2s' }}
-              onMouseEnter={e => (e.currentTarget.style.color = '#cc2424')}
-              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(204,36,36,0.5)')}>
+              style={{ fontSize: '0.68rem', color: 'rgba(232,53,53,0.5)', textDecoration: 'none', letterSpacing: '0.05em', display: 'flex', alignItems: 'center', gap: 8, justifyContent: 'center', paddingTop: 8, transition: 'color 0.2s' }}
+              onMouseEnter={e => (e.currentTarget.style.color = '#e83535')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(232,53,53,0.5)')}>
               ◉ info@decomrobotics.com
             </a>
           </motion.div>

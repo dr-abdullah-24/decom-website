@@ -11,11 +11,11 @@
     overflow-x: hidden;
   }
 
-  ::selection { background: rgba(204,36,36,0.3); color: #fff; }
+  ::selection { background: rgba(232,53,53,0.3); color: #fff; }
 
   ::-webkit-scrollbar { width: 3px; }
   ::-webkit-scrollbar-track { background: #000; }
-  ::-webkit-scrollbar-thumb { background: #cc2424; }
+  ::-webkit-scrollbar-thumb { background: #e83535; }
 }
 
 /* ── Keyframes ── */
@@ -35,8 +35,8 @@
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(204,36,36,0.6); }
-  50%       { opacity: 0.7; transform: scale(1.2); box-shadow: 0 0 0 6px rgba(204,36,36,0); }
+  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(232,53,53,0.6); }
+  50%       { opacity: 0.7; transform: scale(1.2); box-shadow: 0 0 0 6px rgba(232,53,53,0); }
 }
 
 @keyframes scan-h {
@@ -79,8 +79,8 @@
 /* ── Utility ── */
 .cyber-grid {
   background-image:
-    linear-gradient(rgba(204,36,36,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(204,36,36,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(232,53,53,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232,53,53,0.04) 1px, transparent 1px);
   background-size: 60px 60px;
   animation: grid-drift 12s linear infinite;
 }
@@ -106,7 +106,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(110deg, #ff4444, #cc2424, #8b5cf6);
+  background: linear-gradient(110deg, #ff4444, #e83535, #8b5cf6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -116,7 +116,7 @@
   background: linear-gradient(
     110deg,
     #fff 20%,
-    #cc2424 40%,
+    #e83535 40%,
     #fff 60%
   );
   background-size: 200% auto;
@@ -134,13 +134,13 @@
   font-weight: 800;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #cc2424;
+  color: #e83535;
 }
 .section-tag::before {
   content: '';
   width: 20px;
   height: 1px;
-  background: #cc2424;
+  background: #e83535;
   display: block;
 }
 
@@ -148,7 +148,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #cc2424;
+  background: #e83535;
   color: #fff;
   font-size: 0.75rem;
   font-weight: 800;
@@ -171,7 +171,7 @@
   transition: transform 0.4s ease;
 }
 .btn-red:hover::after { transform: translateX(100%); }
-.btn-red:hover { background: #e02828; box-shadow: 0 0 30px rgba(204,36,36,0.5); }
+.btn-red:hover { background: #f04040; box-shadow: 0 0 30px rgba(232,53,53,0.5); }
 
 .btn-ghost {
   display: inline-flex;
@@ -190,21 +190,21 @@
   text-decoration: none;
 }
 .btn-ghost:hover {
-  border-color: #cc2424;
-  color: #cc2424;
+  border-color: #e83535;
+  color: #e83535;
 }
 
 /* Bento tiles */
 .bento-tile {
   background: #0a0000;
-  border: 1px solid rgba(204,36,36,0.12);
+  border: 1px solid rgba(232,53,53,0.12);
   padding: 32px;
   position: relative;
   overflow: hidden;
   transition: border-color 0.3s ease, background 0.3s ease;
 }
 .bento-tile:hover {
-  border-color: rgba(204,36,36,0.4);
+  border-color: rgba(232,53,53,0.4);
   background: #0f0000;
 }
 .bento-tile::before {
@@ -212,7 +212,7 @@
   position: absolute;
   top: 0; left: 0;
   width: 0; height: 2px;
-  background: linear-gradient(90deg, #cc2424, #8b5cf6);
+  background: linear-gradient(90deg, #e83535, #8b5cf6);
   transition: width 0.4s ease;
 }
 .bento-tile:hover::before { width: 100%; }
@@ -222,7 +222,7 @@
   position: absolute;
   left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(204,36,36,0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(232,53,53,0.5), transparent);
   animation: scan-h 3s ease-in-out infinite;
   pointer-events: none;
 }
@@ -237,7 +237,7 @@
 /* Pulse dot */
 .pulse-dot {
   width: 8px; height: 8px;
-  background: #cc2424;
+  background: #e83535;
   border-radius: 50%;
   animation: pulse-dot 2s ease-in-out infinite;
 }
@@ -254,6 +254,6 @@
 .terminal-text {
   font-family: 'Courier New', 'Lucida Console', monospace;
   font-size: 0.75rem;
-  color: rgba(204,36,36,0.6);
+  color: rgba(232,53,53,0.6);
   letter-spacing: 0.1em;
 }

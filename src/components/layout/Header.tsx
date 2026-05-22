@@ -33,7 +33,7 @@ export default function Header() {
           height: 64,
           background: scrolled && !open ? 'rgba(0,0,0,0.92)' : 'transparent',
           backdropFilter: scrolled && !open ? 'blur(16px)' : 'none',
-          borderBottom: scrolled && !open ? '1px solid rgba(204,36,36,0.08)' : '1px solid transparent',
+          borderBottom: scrolled && !open ? '1px solid rgba(232,53,53,0.08)' : '1px solid transparent',
           transition: 'background 0.4s, border-color 0.4s, backdrop-filter 0.4s',
         }}
       >
@@ -46,12 +46,12 @@ export default function Header() {
               alt="Decom Robotics"
               style={{
                 width: 38, height: 38, objectFit: 'contain',
-                filter: 'brightness(0) invert(1) drop-shadow(0 0 5px rgba(204,36,36,0.7))',
+                filter: 'brightness(0) invert(1) drop-shadow(0 0 5px rgba(232,53,53,0.7))',
               }}
             />
             <div>
               <div style={{ fontWeight: 900, letterSpacing: '0.14em', color: '#fff', fontSize: '0.9rem', lineHeight: 1 }}>DECOM</div>
-              <div style={{ fontSize: '0.5rem', letterSpacing: '0.35em', color: '#cc2424', lineHeight: 1.4 }}>ROBOTICS</div>
+              <div style={{ fontSize: '0.5rem', letterSpacing: '0.35em', color: '#e83535', lineHeight: 1.4 }}>ROBOTICS</div>
             </div>
           </Link>
 
@@ -65,7 +65,7 @@ export default function Header() {
               <span
                 style={{
                   fontSize: '0.6rem', fontWeight: 800, letterSpacing: '0.25em',
-                  color: open ? '#cc2424' : 'rgba(200,200,200,0.6)',
+                  color: open ? '#e83535' : 'rgba(200,200,200,0.6)',
                   textTransform: 'uppercase', transition: 'color 0.3s',
                 }}
               >
@@ -73,11 +73,11 @@ export default function Header() {
               </span>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 5, width: 22 }}>
                 <motion.div animate={open ? { rotate: 45, y: 7 }  : { rotate: 0, y: 0 }}  transition={{ duration: 0.3 }}
-                  style={{ height: 1.5, background: open ? '#cc2424' : '#fff', transformOrigin: 'center' }} />
+                  style={{ height: 1.5, background: open ? '#e83535' : '#fff', transformOrigin: 'center' }} />
                 <motion.div animate={open ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }} transition={{ duration: 0.2 }}
                   style={{ height: 1.5, background: '#fff', width: '70%' }} />
                 <motion.div animate={open ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }} transition={{ duration: 0.3 }}
-                  style={{ height: 1.5, background: open ? '#cc2424' : '#fff', transformOrigin: 'center' }} />
+                  style={{ height: 1.5, background: open ? '#e83535' : '#fff', transformOrigin: 'center' }} />
               </div>
             </button>
           </div>
@@ -104,8 +104,8 @@ export default function Header() {
             <div className="absolute inset-0 cyber-grid opacity-25 pointer-events-none" />
 
             {/* decorative corner lines */}
-            <div style={{ position: 'absolute', top: 80, left: 32, width: 40, height: 40, borderTop: '1px solid rgba(204,36,36,0.3)', borderLeft: '1px solid rgba(204,36,36,0.3)' }} />
-            <div style={{ position: 'absolute', bottom: 80, right: 32, width: 40, height: 40, borderBottom: '1px solid rgba(204,36,36,0.3)', borderRight: '1px solid rgba(204,36,36,0.3)' }} />
+            <div style={{ position: 'absolute', top: 80, left: 32, width: 40, height: 40, borderTop: '1px solid rgba(232,53,53,0.3)', borderLeft: '1px solid rgba(232,53,53,0.3)' }} />
+            <div style={{ position: 'absolute', bottom: 80, right: 32, width: 40, height: 40, borderBottom: '1px solid rgba(232,53,53,0.3)', borderRight: '1px solid rgba(232,53,53,0.3)' }} />
 
             {/* Big nav links */}
             <nav style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -127,7 +127,7 @@ export default function Header() {
                   >
                     {({ isActive }) => (
                       <>
-                        <span style={{ fontSize: '0.55rem', letterSpacing: '0.2em', color: isActive ? '#cc2424' : 'rgba(204,36,36,0.3)', fontWeight: 800, minWidth: 28 }}>
+                        <span style={{ fontSize: '0.55rem', letterSpacing: '0.2em', color: isActive ? '#e83535' : 'rgba(232,53,53,0.3)', fontWeight: 800, minWidth: 28 }}>
                           {link.num}
                         </span>
                         <span
@@ -135,7 +135,7 @@ export default function Header() {
                             fontWeight: 900, lineHeight: 1,
                             fontSize: 'clamp(2.8rem, 7vw, 6.5rem)',
                             letterSpacing: '-0.02em',
-                            color: isActive ? '#cc2424' : '#fff',
+                            color: isActive ? '#e83535' : '#fff',
                             transition: 'color 0.2s',
                           }}
                         >
@@ -145,7 +145,7 @@ export default function Header() {
                         <motion.span
                           initial={{ opacity: 0, x: -10 }}
                           whileHover={{ opacity: 1, x: 0 }}
-                          style={{ marginLeft: 'auto', color: '#cc2424', fontSize: '2rem', fontWeight: 900, lineHeight: 1 }}
+                          style={{ marginLeft: 'auto', color: '#e83535', fontSize: '2rem', fontWeight: 900, lineHeight: 1 }}
                         >
                           →
                         </motion.span>
@@ -168,7 +168,7 @@ export default function Header() {
                 { label: 'Offices', val: 'Islamabad  ·  Eagan MN  ·  Dubai', href: null },
               ].map((item) => (
                 <div key={item.label}>
-                  <div style={{ fontSize: '0.55rem', letterSpacing: '0.2em', color: 'rgba(204,36,36,0.5)', textTransform: 'uppercase', marginBottom: 6, fontWeight: 700 }}>
+                  <div style={{ fontSize: '0.55rem', letterSpacing: '0.2em', color: 'rgba(232,53,53,0.5)', textTransform: 'uppercase', marginBottom: 6, fontWeight: 700 }}>
                     {item.label}
                   </div>
                   {item.href
